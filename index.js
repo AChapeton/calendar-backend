@@ -7,12 +7,10 @@ const app = express()
 app.use(express.static('public'))
 
 //Routes
-app.get('/', (req, res) => {
-  console.log('/ needed')
-  res.json({
-    ok: true
-  })
-})
+// TODO: Auth routes // create, login, renew token
+app.use('/api/auth', require('./routes/auth'))
+
+// TODO: CRUD: Events
 
 //Listen petitions
 app.listen(process.env.PORT, () => {
