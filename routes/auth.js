@@ -13,7 +13,7 @@ const { validateFields } = require('../middlewares/validateFields')
 router.post(
   '/register', 
   [
-    check('name', 'Name is required').not().isEmpty(),
+    check('fullname', 'Full name is required').not().isEmpty(),
     check('email', 'Email is required').isEmail(),
     check('password', 'Password must be al least 6 characters lenght').isLength({ min: 6}),
     validateFields
