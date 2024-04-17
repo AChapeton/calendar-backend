@@ -16,11 +16,9 @@ app.use(express.static('public'))
 app.use( express.json() )
 //Routes
 // TODO: Auth routes // create, login, renew token
-app.use('/api/auth', require('./routes/auth'))
-
-// Body lecture & parse
-
+app.use('/api/auth', require('./routes/auth'));
 // TODO: CRUD: Events
+app.use('/api/events', require('./routes/events'));
 
 //Listen petitions
 app.listen(process.env.PORT, () => {
