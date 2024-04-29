@@ -28,7 +28,7 @@ app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`)
 })
 
-app.use('./.netlify/functions/index.js', router)
+app.use('./.netlify/functions/', router)
 const handler = serverless(app);
 module.exports = { handler };
 
